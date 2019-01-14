@@ -49,6 +49,9 @@
     # MongoDB
     export PATH=$PATH:/usr/local/bin/mongoosedb/bin
 
+    # Add Visual Studio Code (code)
+    # export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
+
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
     export EDITOR=/usr/bin/nano
@@ -121,6 +124,9 @@ function gacp {
 	git commit -m "$1";
 	git push origin $2;
 }
+
+# Add Visual Studio Code (code)
+ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
