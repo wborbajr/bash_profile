@@ -4,32 +4,12 @@
 # source ~/.profile
 # ------------------
 
-#  ---------------------------------------------------------------------------
-#
-#  Description:  This file holds all my BASH configurations and aliases
-#
-#  Sections:
-#  1.  Environment Configuration
-#  2.  Make Terminal Better (remapping defaults and adding functionality)
-#  3.  File and Folder Management
-#  4.  Searching
-#  5.  Process Management
-#  6.  Networking
-#  7.  System Operations & Information
-#  8.  Web Development
-#  9.  Reminders & Notes
-#
-#  ---------------------------------------------------------------------------
-
 #   -------------------------------
 #   1. ENVIRONMENT CONFIGURATION
 #   -------------------------------
 
 #   Change Prompt
 #   ------------------------------------------------------------
-    # export PS1="________________________________________________________________________________\n| \w @ \h (\u) \n| => "
-    # export PS2="| => "
-
     # Customize Terminal Prompt - Shows: username/../folder:
     export PS1='\n\u/../\W/: '
 
@@ -48,6 +28,11 @@
 
     # MongoDB
     export PATH=$PATH:/usr/local/bin/mongoosedb/bin
+
+    # Brew
+    # mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+    # mv homebew /usr/local
+    export PATH=$PATH:/usr/local/homebrew/bin
 
     # Add Visual Studio Code (code)
     # export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
@@ -102,7 +87,9 @@ alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file
 
 alias atm='open -a "Atom" '
 alias bp='atm ~/.bash_profile '
+alias bprefresh='source ~/.bash_profile '
 alias trash='rm -rf ~/.Trash/* '
+alias cache='cd /Users/borba/Library/Caches '
 
 # ------------------------------------------
 # Git shortcut
@@ -113,7 +100,8 @@ alias gp="git push -u origin master"
 alias gs="git status"
 alias gp="git pull"
 alias gd="git diff "
-alias ghub-go='git add . ; git commit -m "up" ; git push -u origin master'
+alias gitgo='git add . ; git commit -m "up" ; git push -u origin master'
+alias gitup='git fetch ; git pull'
 
 function gcl {
 	git clone ssh://git@github.com/$1/$2.git;
