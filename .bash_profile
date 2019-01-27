@@ -4,6 +4,23 @@
 # source ~/.profile
 # ------------------
 
+#  ---------------------------------------------------------------------------
+#
+#  Description:  This file holds all my BASH configurations and aliases
+#
+#  Sections:
+#  1.  Environment Configuration
+#  2.  Make Terminal Better (remapping defaults and adding functionality)
+#  3.  File and Folder Management
+#  4.  Searching
+#  5.  Process Management
+#  6.  Networking
+#  7.  System Operations & Information
+#  8.  Web Development
+#  9.  Reminders & Notes
+#
+#  ---------------------------------------------------------------------------
+
 #   -------------------------------
 #   1. ENVIRONMENT CONFIGURATION
 #   -------------------------------
@@ -98,8 +115,9 @@ alias ga="git add *.*"
 alias gc="git commit -m $1"
 alias gp="git push -u origin master"
 alias gs="git status"
-alias gp="git pull"
+alias gp="git pull origin master "
 alias gd="git diff "
+alias gr="git remote add origin $1 ; git remote -v"
 alias gitgo='git add . ; git commit -m "up" ; git push -u origin master'
 alias gitup='git fetch ; git pull'
 
@@ -302,7 +320,7 @@ httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grab
 
 #   httpDebug:  Download a web page and show info on what took time
 #   -------------------------------------------------------------------
-    httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ; }
+httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ; }
 
 
 #   ---------------------------------------
