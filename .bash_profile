@@ -111,15 +111,15 @@ alias cache='cd /Users/borba/Library/Caches '
 # ------------------------------------------
 # Git shortcut
 # ------------------------------------------
-alias ga="git add *.*"
+alias ga="git add ."
 alias gc="git commit -m $1"
 alias gp="git push -u origin master"
 alias gs="git status"
 alias gp="git pull origin master "
 alias gd="git diff "
-alias gr="git remote add origin $1 ; git remote -v"
+alias gr='git remote add origin $1 ; git remote -v '
 alias gitgo='git add . ; git commit -m "up" ; git push -u origin master'
-alias gitup='git fetch ; git pull'
+alias gitup='git fetch ; git pull origin master '
 
 function gcl {
 	git clone ssh://git@github.com/$1/$2.git;
