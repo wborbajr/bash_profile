@@ -118,8 +118,13 @@ alias gs="git status"
 alias gp="git pull origin master "
 alias gd="git diff "
 alias gr='git remote add origin $1 ; git remote -v '
+alias gitpw='git config credential.helper store '
 alias gitgo='git add . ; git commit -m "up" ; git push -u origin master'
 alias gitup='git fetch ; git pull origin master '
+
+# git config user.email wborbajr@gmail.com
+# git config user.name "Waldir Borba Junior"
+# git config credential.helper store
 
 function gcl {
 	git clone ssh://git@github.com/$1/$2.git;
