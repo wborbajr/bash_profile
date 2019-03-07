@@ -68,6 +68,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# MongoDB
+export PATH="$PATH:/usr/local/bin/mongoosedb/bin"
+
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -109,7 +116,8 @@ alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
 
 # Git
-alias ga="git add ."
+alias gtrunk="git checkout -b trunk"
+alias ga="git add -A"
 alias gc="git commit -m $1"
 alias gp="git push -u origin master"
 alias gs="git status"
@@ -120,6 +128,7 @@ alias gitpw='git config credential.helper store '
 alias gitgo='git add . ; git commit -m "up" ; git push -u origin master'
 alias gitup='git fetch ; git pull origin master '
 
+# ORDER
 SPACESHIP_PROMPT_ORDER=(
   time
   user
